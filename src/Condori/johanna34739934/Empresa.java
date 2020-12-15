@@ -23,8 +23,9 @@ public class Empresa {
 
 		// se agrega uncamion el primer camion tiene como identificador 0 el el segundo
 		// 1 2 3.4
-		Integer key=0;
-		flota.put( key, camion);
+		Integer key=-1;
+		Integer contador= key+1;
+		flota.put( contador, camion);
 	}
 
 	public Integer cantidadDeCamiones() {
