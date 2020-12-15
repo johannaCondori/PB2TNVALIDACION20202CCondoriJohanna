@@ -18,7 +18,8 @@ public class Camion  {
 	
 	
 	public Camion (String patente) {
-	
+		this.patente=patente;
+		listaProductos=new ArrayList<Producto>();
 	}
 	
 	
@@ -30,10 +31,14 @@ public class Camion  {
 		 */
 		
 		
-		return null;
+		return this.listaProductos.add(producto);
+		
+		
 	
 	}
-	
+	 public Producto buscarProducto(Integer idProducto) {
+		 
+	 }
 	
 	public Producto descargarProducto(Integer idProducto) {
 	
