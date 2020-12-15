@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import ar.edu.unlam.pb2.eva03.VehiculoInexistente;
+
 public class Camion  {
 	
 	// completar la clase Empresa
@@ -37,18 +39,30 @@ public class Camion  {
 	
 	}
 	 public Producto buscarProducto(Integer idProducto) {
-		 
+		 for (Producto producto : listaProductos) {
+			if(producto.getId().equals(idProducto)==true)
+				return producto;
+		}
+		return null;
 	 }
 	
-	public Producto descargarProducto(Integer idProducto) {
+	public Producto descargarProducto(Integer idProducto) throws ProductoInexistenteException {
 	
 		/*
 		 * buesca y un producto por su id y devuelve el producto encontrado
 		 * por otro lado elimina dicho producto de la coleccion
 		 * encaso que el idProducto no se encuentre retorna una exception ProductoInexistenteException
 		 */
+		Producto productoBuscado=null;
+		if(buscarProducto(idProducto)!=null) {
+			productoBuscado=buscarProducto(idProducto);}
 		
-	return null;
+		else {
+			throw new ProductoInexistenteException("id de producto inexistente");
+		}
+		listaProductos.remove(buscarProducto(idProducto));
+		
+	return productoBuscado;
 	}
 	
 

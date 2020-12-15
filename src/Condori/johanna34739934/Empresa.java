@@ -23,12 +23,13 @@ public class Empresa {
 
 		// se agrega uncamion el primer camion tiene como identificador 0 el el segundo
 		// 1 2 3.4
-
+		Integer key=0;
+		flota.put( key, camion);
 	}
 
 	public Integer cantidadDeCamiones() {
 
-		return null;
+		return flota.size();
 	}
 
 	public TreeSet<Camion> obtenerTiendascamionOrdenadoPorPatente() {

@@ -15,7 +15,7 @@ public class TestCamion {
 	//opcional
 	@Test
 	public void queSeAgregueUnProducto() {
-	
+	Camion miCamion=new Camion("123");
 	}
 	
 	//opcional
